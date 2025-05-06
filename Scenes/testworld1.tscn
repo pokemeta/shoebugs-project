@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://bqgtu5ii4gy3i"]
+
+[ext_resource type="PackedScene" uid="uid://dapfgqpi5qmlf" path="res://Scenes/UI/mainmenu.tscn" id="1_faw6b"]
+[ext_resource type="PackedScene" uid="uid://hp3pnemoeec" path="res://Scenes/player.tscn" id="2_smn25"]
+[ext_resource type="PackedScene" uid="uid://c0wywtpkewiut" path="res://Scenes/sbs/shoebug1.tscn" id="3_ph65m"]
+[ext_resource type="Texture2D" uid="uid://s45y0d36613" path="res://icon.svg" id="4_lohg3"]
+
+[sub_resource type="GDScript" id="GDScript_faw6b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ph65m"]
+size = Vector2(163, 666)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lohg3"]
+size = Vector2(163, 1181.89)
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_faw6b")
+
+[node name="MainMenu" parent="." instance=ExtResource("1_faw6b")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_smn25")]
+position = Vector2(574, 309)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_ph65m")]
+position = Vector2(316, 291)
+scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-71.5, 323)
+shape = SubResource("RectangleShape2D_ph65m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1240, 323)
+shape = SubResource("RectangleShape2D_ph65m")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(593.817, 732.148)
+rotation = -1.5392
+shape = SubResource("RectangleShape2D_lohg3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(588, -108)
+rotation = -1.5392
+shape = SubResource("RectangleShape2D_lohg3")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-55, 308)
+scale = Vector2(1, 5.46875)
+texture = ExtResource("4_lohg3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1224, 308)
+scale = Vector2(1, 5.46875)
+texture = ExtResource("4_lohg3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(596.5, -105)
+scale = Vector2(9.27344, 1)
+texture = ExtResource("4_lohg3")
+
+[node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(596.5, 715)
+scale = Vector2(9.27344, 1)
+texture = ExtResource("4_lohg3")

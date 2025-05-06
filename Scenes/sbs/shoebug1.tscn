@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://c0wywtpkewiut"]
+
+[ext_resource type="Texture2D" uid="uid://r8lgtcscjsk5" path="res://Sprites/shoebug.png" id="1_resp6"]
+[ext_resource type="Script" uid="uid://c1io3a6t3rd3s" path="res://Scripts/sb1.gd" id="1_tojey"]
+[ext_resource type="Texture2D" uid="uid://dyqoyahd8yrdo" path="res://Sprites/shoebug2.png" id="2_tojey"]
+[ext_resource type="PackedScene" uid="uid://c4k7rxmcrvekv" path="res://Scenes/interactcomp.tscn" id="4_tgap7"]
+[ext_resource type="Script" uid="uid://db2xlppsrk65h" path="res://Scripts/interactcomp.gd" id="5_urf1x"]
+[ext_resource type="Script" uid="uid://cnyfx6k6gu1ud" path="res://Scripts/sbfunc.gd" id="6_urf1x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_22jsg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_resp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tojey")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_resp6"]
+size = Vector2(207, 139)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tgap7"]
+radius = 205.01
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_tojey")
+movements = Array[Vector2]([Vector2(0, 1), Vector2(0, -1), Vector2(1, 0), Vector2(-1, 0)])
+speed = 2.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_22jsg")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.0714596
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, 3.5)
+shape = SubResource("RectangleShape2D_resp6")
+
+[node name="ChangeDirectionTimer" type="Timer" parent="."]
+
+[node name="raycasts" type="Node2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="raycasts"]
+target_position = Vector2(0, -250)
+
+[node name="RayCast2D2" type="RayCast2D" parent="raycasts"]
+target_position = Vector2(0, 250)
+
+[node name="RayCast2D3" type="RayCast2D" parent="raycasts"]
+target_position = Vector2(250, 0)
+
+[node name="RayCast2D4" type="RayCast2D" parent="raycasts"]
+target_position = Vector2(-250, 0)
+
+[node name="interactcomp" parent="." node_paths=PackedStringArray("intnode") instance=ExtResource("4_tgap7")]
+script = ExtResource("5_urf1x")
+intnode = NodePath("sbfunc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="interactcomp"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_tgap7")
+
+[node name="sbfunc" type="Node" parent="interactcomp"]
+script = ExtResource("6_urf1x")
+metadata/_custom_type_script = "uid://cnyfx6k6gu1ud"
+
+[connection signal="timeout" from="ChangeDirectionTimer" to="." method="_on_change_direction_timer_timeout"]
+[connection signal="body_entered" from="interactcomp" to="interactcomp" method="_on_body_entered"]
+[connection signal="body_exited" from="interactcomp" to="interactcomp" method="_on_body_exited"]

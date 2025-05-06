@@ -1,0 +1,87 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://bu1wtqkrwnyj6"]
+
+[ext_resource type="FontFile" uid="uid://c227nvxtbjut0" path="res://Fonts/Hey Comic.otf" id="1_xto84"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xto84"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m74om"]
+bg_color = Color(0.219501, 0.219501, 0.219501, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gy285"]
+bg_color = Color(0.138034, 0.138034, 0.138034, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3u1k3"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xto84"]
+bg_color = Color(0, 0, 0, 0.207843)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_recyc"]
+bg_color = Color(0.792157, 0.603922, 0.470588, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsbaw"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spvl6"]
+bg_color = Color(0.279265, 0.61488, 0.955543, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[resource]
+default_font = ExtResource("1_xto84")
+default_font_size = 50
+Button/styles/focus = SubResource("StyleBoxEmpty_xto84")
+Button/styles/hover = SubResource("StyleBoxFlat_m74om")
+Button/styles/normal = SubResource("StyleBoxFlat_gy285")
+Button/styles/pressed = SubResource("StyleBoxFlat_3u1k3")
+Panel/styles/panel = SubResource("StyleBoxFlat_xto84")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_recyc")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_rsbaw")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_spvl6")
