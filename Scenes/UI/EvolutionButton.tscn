@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://udh4e07baiv0"]
 
 [ext_resource type="Theme" uid="uid://bu1wtqkrwnyj6" path="res://Themes/UITheme.tres" id="1_6y6jp"]
-[ext_resource type="Script" path="res://Scripts/EvolutionButton.gd" id="2_6y6jp"]
+[ext_resource type="Script" uid="uid://6eb6lf1ptw4u" path="res://Scripts/EvolutionButton.gd" id="2_6y6jp"]
 [ext_resource type="Texture2D" uid="uid://r8lgtcscjsk5" path="res://Sprites/shoebug.png" id="2_vc0i6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6y6jp"]
@@ -10,6 +10,7 @@ border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
+border_color = Color(0.729412, 0.490196, 0.266667, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
