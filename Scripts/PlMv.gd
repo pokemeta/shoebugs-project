@@ -4,6 +4,7 @@ extends CharacterBody2D
 var speed: float  = 300.0
 var canmove: bool = true
 var intwith 
+@export var money: int
 func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
