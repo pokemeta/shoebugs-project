@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://qgj7n808q78g"]
+[gd_scene load_steps=5 format=3 uid="uid://n7d7pe2s2ijv"]
 
-[ext_resource type="Script" uid="uid://b87csm5lbpdmt" path="res://Scripts/shop.gd" id="1_fdj0q"]
-[ext_resource type="Script" uid="uid://dxcs8te5i38p4" path="res://Scripts/slot.gd" id="1_io27d"]
+[ext_resource type="Script" path="res://Scripts/shop.gd" id="1_fdj0q"]
+[ext_resource type="Script" path="res://Scripts/slot.gd" id="1_io27d"]
 [ext_resource type="Script" uid="uid://8wchom8fgmcc" path="res://Scripts/shopcomp.gd" id="2_2shtd"]
 [ext_resource type="Resource" uid="uid://cr3n7u55ef3ek" path="res://Resources/Cheese.tres" id="3_fdj0q"]
 

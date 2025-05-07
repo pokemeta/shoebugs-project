@@ -27,8 +27,14 @@ func move(wheretomove) -> void:
 
 func _on_change_direction_timer_timeout() -> void:
 	choosemov()
+
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	if actualdir != null:
 		velocity += actualdir * speed
 	move_and_slide()
+
+
+func _on_foodndrinktimer_timeout() -> void:
+	stats.food -= 1
+	stats.water -= 1
