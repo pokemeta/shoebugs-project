@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="shoppr" load_steps=3 format=3 uid="uid://cr3n7u55ef3ek"]
+
+[ext_resource type="Script" uid="uid://g21aqlbp7s4m" path="res://Scripts/shopproduct.gd" id="1_atyvl"]
+[ext_resource type="Texture2D" uid="uid://wk4vyitv378l" path="res://Sprites/cheese.png" id="2_571c8"]
+
+[resource]
+script = ExtResource("1_atyvl")
+namee = "Cheese"
+sprite = ExtResource("2_571c8")
+cost = 1
+metadata/_custom_type_script = "uid://g21aqlbp7s4m"
