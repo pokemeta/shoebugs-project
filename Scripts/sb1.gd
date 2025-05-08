@@ -2,8 +2,9 @@ extends CharacterBody2D
 @export var movements: Array[Vector2] #directions of movement for a shoe bug. I think it must be a part of a class but later
 @onready var ChDt = get_node("ChangeDirectionTimer")
 @export var speed: float = 0
-var stats = BugStats.new(100, 100)
+var stats = BugStats.new(100, 100, self)
 var actualdir: Vector2
+@export var cost: int
 func _ready() -> void:
 	ChDt.start(1)
 func idle() -> void:

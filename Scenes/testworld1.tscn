@@ -8245,7 +8245,6 @@ tile_set = SubResource("TileSet_b65vo")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_smn25")]
 position = Vector2(574, 309)
-money = 5
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 

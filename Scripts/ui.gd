@@ -13,8 +13,16 @@ func _on_timer_timeout() -> void:
 
 
 func feed() -> void:
-	plr.cheese -= 1
-	shoebugtoshow.food += 5
+	if plr.cheese > 0:
+		plr.cheese -= 1
+		shoebugtoshow.food += 5
 
 func givewater() -> void:
 	pass # Replace with function body.
+
+
+func sell() -> void:
+	plr.inventory.emit_signal("add_coin", shoebugtoshow.jopa.cost)
+	shoebugtoshow.jopa.get_node("interactcomp/sbfunc").ui.queue_free()
+	shoebugtoshow.jopa.queue_free()
+	plr.canmove = true
