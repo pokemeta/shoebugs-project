@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsa5o0cjma2fu"]
+
+[ext_resource type="Script" uid="uid://ixtmuhktl1o7" path="res://Scripts/inventory.gd" id="1_wdn4f"]
+
+[node name="Inventory" type="Node"]
+script = ExtResource("1_wdn4f")
+
+[connection signal="add_coin" from="." to="." method="_on_add_coin"]
+[connection signal="remove_coin" from="." to="." method="_on_remove_coin"]
