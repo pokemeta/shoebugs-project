@@ -83,6 +83,7 @@ corner_radius_bottom_left = 25
 [resource]
 default_font = ExtResource("1_xto84")
 default_font_size = 50
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/styles/focus = SubResource("StyleBoxEmpty_xto84")
 Button/styles/hover = SubResource("StyleBoxFlat_m74om")
 Button/styles/normal = SubResource("StyleBoxFlat_gy285")

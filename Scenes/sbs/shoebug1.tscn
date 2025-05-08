@@ -31,6 +31,7 @@ radius = 205.01
 script = ExtResource("1_tojey")
 movements = Array[Vector2]([Vector2(0, 1), Vector2(0, -1), Vector2(1, 0), Vector2(-1, 0)])
 speed = 2.0
+cost = 15
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_22jsg")
@@ -70,6 +71,11 @@ shape = SubResource("CircleShape2D_tgap7")
 script = ExtResource("6_urf1x")
 metadata/_custom_type_script = "uid://cnyfx6k6gu1ud"
 
+[node name="foodndrinktimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
 [connection signal="timeout" from="ChangeDirectionTimer" to="." method="_on_change_direction_timer_timeout"]
 [connection signal="body_entered" from="interactcomp" to="interactcomp" method="_on_body_entered"]
 [connection signal="body_exited" from="interactcomp" to="interactcomp" method="_on_body_exited"]
+[connection signal="timeout" from="foodndrinktimer" to="." method="_on_foodndrinktimer_timeout"]

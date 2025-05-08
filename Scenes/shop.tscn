@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://n7d7pe2s2ijv"]
+
+[ext_resource type="Script" uid="uid://b87csm5lbpdmt" path="res://Scripts/shop.gd" id="1_fdj0q"]
+[ext_resource type="Script" uid="uid://dxcs8te5i38p4" path="res://Scripts/slot.gd" id="1_io27d"]
+[ext_resource type="Script" uid="uid://8wchom8fgmcc" path="res://Scripts/shopcomp.gd" id="2_2shtd"]
+[ext_resource type="Resource" uid="uid://cr3n7u55ef3ek" path="res://Resources/Cheese.tres" id="3_fdj0q"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_fdj0q")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 64.0
+offset_top = 60.0
+offset_right = 258.0
+offset_bottom = 254.0
+script = ExtResource("1_io27d")
+slot = ExtResource("3_fdj0q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel"]
+position = Vector2(99, 100)
+scale = Vector2(0.765625, 0.765625)
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 207.0
+offset_right = 186.0
+offset_bottom = 271.0
+text = "buy"
+
+[node name="shopcomp" type="Node" parent="."]
+script = ExtResource("2_2shtd")
+
+[connection signal="button_up" from="Panel/Button" to="Panel" method="_on_button_button_up"]

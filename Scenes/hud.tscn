@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://doig37rypve7d"]
+
+[ext_resource type="FontFile" uid="uid://c227nvxtbjut0" path="res://Fonts/Hey Comic.otf" id="1_e0onf"]
+[ext_resource type="Script" uid="uid://ntpar8kwodae" path="res://Scripts/hud.gd" id="1_fccik"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fccik"]
+font = ExtResource("1_e0onf")
+font_size = 48
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_fccik")
+
+[node name="CoinCounter" type="Label" parent="."]
+offset_left = 924.0
+offset_top = 553.0
+offset_right = 1094.0
+offset_bottom = 618.0
+text = "Coins: 0"
+label_settings = SubResource("LabelSettings_fccik")
+
+[connection signal="update_coin_hud" from="." to="." method="_on_update_coin_hud"]

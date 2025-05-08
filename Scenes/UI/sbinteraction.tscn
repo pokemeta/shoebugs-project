@@ -110,4 +110,7 @@ text = "Sell"
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[connection signal="button_down" from="Control/Panel/PanelContainer/VBoxContainer/Feed" to="." method="feed"]
+[connection signal="pressed" from="Control/Panel/PanelContainer/VBoxContainer/Water" to="." method="givewater"]
+[connection signal="button_down" from="Control/Panel/PanelContainer/VBoxContainer/Sell" to="." method="sell"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
