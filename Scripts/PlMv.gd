@@ -8,6 +8,7 @@ var invopeneed: bool = false
 var ui
 # hud variables
 @onready var inventory = $"../Inventory"
+@onready var hud = $"../HUD"
 @export var cheese: int
 # debug variables goes here
 var can_add_coins: bool = false
@@ -30,6 +31,8 @@ func _physics_process(delta: float) -> void:
 	# so that the signals can receive a value.
 	if can_add_coins and Input.is_action_just_pressed("coin_add"):
 		inventory.emit_signal("add_coin", 1)
+	
+	hud.cheese_hud.text = "Cheese: " + str(cheese)
 
 
 func _input(event: InputEvent) -> void:

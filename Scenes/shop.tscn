@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://8wchom8fgmcc" path="res://Scripts/shopcomp.gd" id="2_2shtd"]
 [ext_resource type="Resource" uid="uid://cr3n7u55ef3ek" path="res://Resources/Cheese.tres" id="3_fdj0q"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="ShopLayer" type="CanvasLayer"]
 script = ExtResource("1_fdj0q")
 
 [node name="Panel" type="Panel" parent="."]

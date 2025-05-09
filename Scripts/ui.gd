@@ -1,6 +1,11 @@
 extends CanvasLayer
+
 var shoebugtoshow: BugStats
 var plr
+
+@onready var warning_cheese_label = $Control/Panel/WarningCheese
+@onready var warning_cheese_timer = $CheeseWarnTimer
+
 func _ready() -> void:
 	$Timer.start(0.005)
 	for i in get_tree().get_current_scene().get_children():
@@ -16,6 +21,9 @@ func feed() -> void:
 	if plr.cheese > 0:
 		plr.cheese -= 1
 		shoebugtoshow.food += 5
+	else:
+		warning_cheese_label.visible = true
+		warning_cheese_timer.start()
 
 func givewater() -> void:
 	pass # Replace with function body.
@@ -26,3 +34,6 @@ func sell() -> void:
 	shoebugtoshow.jopa.get_node("interactcomp/sbfunc").ui.queue_free()
 	shoebugtoshow.jopa.queue_free()
 	plr.canmove = true
+	
+func _on_cheese_warn_timer_timeout() -> void:
+	warning_cheese_label.visible = false

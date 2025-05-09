@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwanietim7mq7"]
+[gd_scene load_steps=5 format=3 uid="uid://cwanietim7mq7"]
 
 [ext_resource type="Script" uid="uid://cstnnt7qseoa0" path="res://Scripts/ui.gd" id="1_j6f4f"]
 [ext_resource type="Theme" uid="uid://bu1wtqkrwnyj6" path="res://Themes/UITheme.tres" id="1_nyrp3"]
@@ -15,7 +15,13 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[sub_resource type="LabelSettings" id="LabelSettings_j6f4f"]
+font_size = 32
+font_color = Color(0.881566, 0, 0.124162, 1)
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ShoeBugLayer" type="CanvasLayer"]
 script = ExtResource("1_j6f4f")
 
 [node name="Control" type="Control" parent="."]
@@ -107,10 +113,31 @@ size_flags_vertical = 6
 theme_override_font_sizes/font_size = 40
 text = "Sell"
 
+[node name="WarningCheese" type="Label" parent="Control/Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.5
+offset_top = -122.5
+offset_right = 85.5
+offset_bottom = -35.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Not enough
+cheese"
+label_settings = SubResource("LabelSettings_j6f4f")
+
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="CheeseWarnTimer" type="Timer" parent="."]
 
 [connection signal="button_down" from="Control/Panel/PanelContainer/VBoxContainer/Feed" to="." method="feed"]
 [connection signal="pressed" from="Control/Panel/PanelContainer/VBoxContainer/Water" to="." method="givewater"]
 [connection signal="button_down" from="Control/Panel/PanelContainer/VBoxContainer/Sell" to="." method="sell"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="CheeseWarnTimer" to="." method="_on_cheese_warn_timer_timeout"]
