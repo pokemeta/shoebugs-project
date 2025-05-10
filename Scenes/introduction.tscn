@@ -1,0 +1,260 @@
+[gd_scene load_steps=20 format=4 uid="uid://cde2485x872w4"]
+
+[ext_resource type="PackedScene" uid="uid://b4ew7tjaa2poo" path="res://Scenes/diaarea.tscn" id="1_3yww6"]
+[ext_resource type="Script" uid="uid://cvpuejvy777vb" path="res://Scenes/introduction.gd" id="1_46kw3"]
+[ext_resource type="PackedScene" uid="uid://hp3pnemoeec" path="res://Scenes/player.tscn" id="3_gko15"]
+[ext_resource type="Texture2D" uid="uid://ch346y4gxh8el" path="res://Sprites/tilemap.png" id="3_yw886"]
+[ext_resource type="Texture2D" uid="uid://cm138dihh5qdi" path="res://Sprites/Backgrounds/1.png" id="4_ce5b6"]
+[ext_resource type="Texture2D" uid="uid://d15gr1hsdd1v7" path="res://Sprites/Backgrounds/2.png" id="4_quwfq"]
+[ext_resource type="PackedScene" uid="uid://dn48u0742v61c" path="res://Scenes/textbox.tscn" id="4_s4gu6"]
+[ext_resource type="PackedScene" uid="uid://doig37rypve7d" path="res://Scenes/hud.tscn" id="5_cmi4o"]
+[ext_resource type="PackedScene" uid="uid://bsa5o0cjma2fu" path="res://Scenes/inventory.tscn" id="6_elr4u"]
+[ext_resource type="Script" uid="uid://bx5k6b7ryvo6p" path="res://Scenes/node.gd" id="6_o556p"]
+[ext_resource type="Texture2D" uid="uid://cfas3v8ha2frf" path="res://Sprites/box.png" id="10_3dhas"]
+[ext_resource type="Texture2D" uid="uid://2liuiqbs1k2h" path="res://Sprites/Backgrounds/3.png" id="11_axyh3"]
+[ext_resource type="Script" uid="uid://clr0aa31uxrho" path="res://Scripts/dia2.gd" id="13_dxm5h"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3dhas"]
+texture = ExtResource("3_yw886")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+4:7/0 = 0
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+5:7/0 = 0
+5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o556p"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_3dhas")
+
+[sub_resource type="Image" id="Image_axyh3"]
+
+[sub_resource type="Image" id="Image_dxm5h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o556p"]
+radius = 182.011
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_axyh3"]
+size = Vector2(125, 117)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_46kw3")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-67, 72)
+tile_map_data = PackedByteArray("AAD//wAAAAAEAAQAAAD//wEAAAAFAAQAAAAAAAAAAAAEAAQAAAAAAAEAAAAEAAQAAAABAAAAAAAEAAQAAAABAAEAAAAFAAUAAAACAAAAAAAFAAQAAAACAAEAAAAEAAQAAAADAAAAAAAEAAQAAAADAAEAAAAEAAQAAAAEAAAAAAAFAAUAAAAEAAEAAAAEAAQAAAAFAAAAAAAEAAQAAAAFAAEAAAAEAAQAAAAGAAAAAAAFAAUAAAAGAAEAAAAEAAQAAAAHAAAAAAAEAAQAAAAHAAEAAAAEAAQAAAAIAAAAAAAEAAQAAAAIAAEAAAAEAAQAAAAJAAAAAAAEAAQAAAAJAAEAAAAEAAQAAAAFAP//AAAEAAQAAAAFAAIAAAAEAAQAAAAGAP//AAAFAAQAAAAGAAIAAAAFAAUAAAAHAP//AAAEAAQAAAAHAAIAAAAEAAQAAAAIAP//AAAFAAQAAAAIAAIAAAAEAAQAAAAJAP//AAAEAAQAAAAJAAIAAAAFAAUAAAD/////AAAFAAIAAAAAAP//AAAFAAIAAAABAP//AAAFAAIAAAACAP//AAAFAAIAAAADAP//AAAFAAIAAAAEAP//AAAFAAIAAAAFAP7/AAAFAAIAAAAGAP7/AAAFAAIAAAAHAP7/AAAFAAIAAAAIAP7/AAAFAAIAAAAJAP7/AAAFAAIAAAD//wIAAAAFAAcAAAAAAAIAAAAFAAcAAAABAAIAAAAFAAcAAAACAAIAAAAFAAcAAAADAAIAAAAFAAcAAAAEAAIAAAAFAAcAAAAFAAMAAAAFAAcAAAAGAAMAAAAFAAcAAAAHAAMAAAAFAAcAAAAIAAMAAAAFAAcAAAAJAAMAAAAFAAcAAAAKAP//AAAHAAUAAAAKAAAAAAAHAAUAAAAKAAEAAAAHAAUAAAAKAAIAAAAHAAUAAAAKAAMAAAAHAAcAAAAKAP7/AAAHAAIAAAD+/wAAAAACAAQAAAD+/wEAAAACAAQAAAD+////AAACAAIAAAD+/wIAAAACAAcAAAADAP7/AAACAAEAAAAEAP7/AAACAAEAAAD+/wMAAAACAAEAAAD//wMAAAACAAEAAAAAAAMAAAACAAEAAAABAAMAAAACAAEAAAACAAMAAAACAAEAAAADAAMAAAACAAEAAAAEAAMAAAACAAEAAAD9////AAACAAEAAAD9/wAAAAACAAEAAAD9/wEAAAACAAEAAAD9/wIAAAACAAEAAAD9/wMAAAACAAEAAAD9//7/AAACAAEAAAD+//7/AAACAAEAAAD///7/AAACAAEAAAAAAP7/AAACAAEAAAABAP7/AAACAAEAAAACAP7/AAACAAEAAAD9//v/AAACAAEAAAD9//z/AAACAAEAAAD9//3/AAACAAEAAAD+//v/AAACAAEAAAD+//z/AAACAAEAAAD+//3/AAACAAEAAAD///v/AAACAAEAAAD///z/AAACAAEAAAD///3/AAACAAEAAAAAAPv/AAACAAEAAAAAAPz/AAACAAEAAAAAAP3/AAACAAEAAAABAPv/AAACAAEAAAABAPz/AAACAAEAAAABAP3/AAACAAEAAAACAPv/AAACAAEAAAACAPz/AAACAAEAAAACAP3/AAACAAEAAAADAPv/AAACAAEAAAADAPz/AAACAAEAAAADAP3/AAACAAEAAAAEAPv/AAACAAEAAAAEAPz/AAACAAEAAAAEAP3/AAACAAEAAAAFAPv/AAACAAEAAAAFAPz/AAACAAEAAAAFAP3/AAACAAEAAAAGAPv/AAACAAEAAAAGAPz/AAACAAEAAAAGAP3/AAACAAEAAAAHAPv/AAACAAEAAAAHAPz/AAACAAEAAAAHAP3/AAACAAEAAAAIAPv/AAACAAEAAAAIAPz/AAACAAEAAAAIAP3/AAACAAEAAAAJAPv/AAACAAEAAAAJAPz/AAACAAEAAAAJAP3/AAACAAEAAAAKAPv/AAACAAEAAAAKAPz/AAACAAEAAAAKAP3/AAACAAEAAAD9/wQAAAACAAEAAAD9/wUAAAACAAEAAAD9/wYAAAACAAEAAAD+/wQAAAACAAEAAAD+/wUAAAACAAEAAAD+/wYAAAACAAEAAAD//wQAAAACAAEAAAD//wUAAAACAAEAAAD//wYAAAACAAEAAAAAAAQAAAACAAEAAAAAAAUAAAACAAEAAAAAAAYAAAACAAEAAAABAAQAAAACAAEAAAABAAUAAAACAAEAAAABAAYAAAACAAEAAAACAAQAAAACAAEAAAACAAUAAAACAAEAAAACAAYAAAACAAEAAAADAAQAAAACAAEAAAADAAUAAAACAAEAAAADAAYAAAACAAEAAAAEAAQAAAACAAEAAAAEAAUAAAACAAEAAAAEAAYAAAACAAEAAAAFAAQAAAACAAEAAAAFAAUAAAACAAEAAAAFAAYAAAACAAEAAAAGAAQAAAACAAEAAAAGAAUAAAACAAEAAAAGAAYAAAACAAEAAAAHAAQAAAACAAEAAAAHAAUAAAACAAEAAAAHAAYAAAACAAEAAAAIAAQAAAACAAEAAAAIAAUAAAACAAEAAAAIAAYAAAACAAEAAAAJAAQAAAACAAEAAAAJAAUAAAACAAEAAAAJAAYAAAACAAEAAAAKAAQAAAACAAEAAAAKAAUAAAACAAEAAAAKAAYAAAACAAEAAAALAPv/AAACAAEAAAALAPz/AAACAAEAAAALAP3/AAACAAEAAAALAP7/AAACAAEAAAALAP//AAACAAEAAAALAAAAAAACAAEAAAALAAEAAAACAAEAAAALAAIAAAACAAEAAAALAAMAAAACAAEAAAALAAQAAAACAAEAAAALAAUAAAACAAEAAAALAAYAAAACAAEAAAAMAPv/AAACAAEAAAAMAPz/AAACAAEAAAAMAP3/AAACAAEAAAAMAP7/AAACAAEAAAAMAP//AAACAAEAAAAMAAAAAAACAAEAAAAMAAEAAAACAAEAAAAMAAIAAAACAAEAAAAMAAMAAAACAAEAAAAMAAQAAAACAAEAAAAMAAUAAAACAAEAAAAMAAYAAAACAAEAAAANAPv/AAACAAEAAAANAPz/AAACAAEAAAANAP3/AAACAAEAAAANAP7/AAACAAEAAAANAP//AAACAAEAAAANAAAAAAACAAEAAAANAAEAAAACAAEAAAANAAIAAAACAAEAAAANAAMAAAACAAEAAAANAAQAAAACAAEAAAANAAUAAAACAAEAAAANAAYAAAACAAEAAAAOAPv/AAACAAEAAAAOAPz/AAACAAEAAAAOAP3/AAACAAEAAAAOAP7/AAACAAEAAAAOAP//AAACAAEAAAAOAAAAAAACAAEAAAAOAAEAAAACAAEAAAAOAAIAAAACAAEAAAAOAAMAAAACAAEAAAAOAAQAAAACAAEAAAAOAAUAAAACAAEAAAAOAAYAAAACAAEAAAAPAPv/AAACAAEAAAAPAPz/AAACAAEAAAAPAP3/AAACAAEAAAAPAP7/AAACAAEAAAAPAP//AAACAAEAAAAPAAAAAAACAAEAAAAPAAEAAAACAAEAAAAPAAIAAAACAAEAAAAPAAMAAAACAAEAAAAPAAQAAAACAAEAAAAPAAUAAAACAAEAAAAPAAYAAAACAAEAAAD5//v/AAACAAEAAAD5//z/AAACAAEAAAD5//3/AAACAAEAAAD5//7/AAACAAEAAAD5////AAACAAEAAAD5/wAAAAACAAEAAAD5/wEAAAACAAEAAAD5/wIAAAACAAEAAAD5/wMAAAACAAEAAAD5/wQAAAACAAEAAAD5/wUAAAACAAEAAAD5/wYAAAACAAEAAAD6//v/AAACAAEAAAD6//z/AAACAAEAAAD6//3/AAACAAEAAAD6//7/AAACAAEAAAD6////AAACAAEAAAD6/wAAAAACAAEAAAD6/wEAAAACAAEAAAD6/wIAAAACAAEAAAD6/wMAAAACAAEAAAD6/wQAAAACAAEAAAD6/wUAAAACAAEAAAD6/wYAAAACAAEAAAD7//v/AAACAAEAAAD7//z/AAACAAEAAAD7//3/AAACAAEAAAD7//7/AAACAAEAAAD7////AAACAAEAAAD7/wAAAAACAAEAAAD7/wEAAAACAAEAAAD7/wIAAAACAAEAAAD7/wMAAAACAAEAAAD7/wQAAAACAAEAAAD7/wUAAAACAAEAAAD7/wYAAAACAAEAAAD8//v/AAACAAEAAAD8//z/AAACAAEAAAD8//3/AAACAAEAAAD8//7/AAACAAEAAAD8////AAACAAEAAAD8/wAAAAACAAEAAAD8/wEAAAACAAEAAAD8/wIAAAACAAEAAAD8/wMAAAACAAEAAAD8/wQAAAACAAEAAAD8/wUAAAACAAEAAAD8/wYAAAACAAEAAAA=")
+tile_set = SubResource("TileSet_o556p")
+
+[node name="diaarea" parent="." instance=ExtResource("1_3yww6")]
+shtuki = [{
+"name": "Me",
+"sprite": ExtResource("4_ce5b6"),
+"text": "When my uncle, who was a shoemaker, died, I got his house"
+}, {
+"name": "Me",
+"sprite": ExtResource("4_quwfq"),
+"text": "I was really excited when I moved there but something was wrong"
+}, {
+"name": "Ingame tip",
+"sprite": SubResource("Image_axyh3"),
+"text": "You can use wasd or arrows to walk"
+}]
+
+[node name="Node" type="Node" parent="diaarea" groups=["subdiaarea", "subdiarea"]]
+script = ExtResource("6_o556p")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_gko15")]
+position = Vector2(38, 194)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="HUD" parent="." instance=ExtResource("5_cmi4o")]
+
+[node name="textbox" parent="." instance=ExtResource("4_s4gu6")]
+
+[node name="Inventory" parent="." instance=ExtResource("6_elr4u")]
+
+[node name="diaarea2" parent="." instance=ExtResource("1_3yww6")]
+shtuki = [{
+"name": "Me",
+"sprite": ExtResource("11_axyh3"),
+"text": "In a large box there was something I have never seen before"
+}, {
+"name": "Ingame tip",
+"sprite": SubResource("Image_dxm5h"),
+"text": "It's a shoebug. They are a source of your income"
+}, {
+"name": "Ingame tip",
+"sprite": SubResource("Image_dxm5h"),
+"text": "Your need to take care of them: Feed, make them evolve with special items...."
+}, {
+"name": "Ingame tip",
+"sprite": SubResource("Image_dxm5h"),
+"text": "And sometimes sell them(Evolution makes them count more)"
+}, {
+"name": "Ingame tip",
+"sprite": SubResource("Image_dxm5h"),
+"text": "You can also buy some items like shoebug food in shop. Press I to open shop"
+}]
+
+[node name="Sprite2D" type="Sprite2D" parent="diaarea2"]
+position = Vector2(999, 195)
+scale = Vector2(0.390476, 0.390476)
+texture = ExtResource("10_3dhas")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="diaarea2"]
+position = Vector2(983, 186)
+shape = SubResource("CircleShape2D_o556p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="diaarea2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="diaarea2/StaticBody2D"]
+position = Vector2(993.5, 193.5)
+shape = SubResource("RectangleShape2D_axyh3")
+
+[node name="Node" type="Node" parent="diaarea2" groups=["subdiarea"]]
+script = ExtResource("13_dxm5h")

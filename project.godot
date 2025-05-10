@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="Shoebugs project"
-run/main_scene="uid://bqgtu5ii4gy3i"
+run/main_scene="uid://cde2485x872w4"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [global_group]
 
 plr=""
+subdiarea=""
 
 [input]
 
