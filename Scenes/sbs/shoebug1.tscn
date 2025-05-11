@@ -72,7 +72,11 @@ script = ExtResource("6_urf1x")
 metadata/_custom_type_script = "uid://cnyfx6k6gu1ud"
 
 [node name="foodndrinktimer" type="Timer" parent="."]
+<<<<<<< HEAD
 wait_time = 2.0
+=======
+wait_time = 60.0
+>>>>>>> 72e30d3523fc0f064ad2154d6580baf95ff5a6f4
 autostart = true
 
 [connection signal="timeout" from="ChangeDirectionTimer" to="." method="_on_change_direction_timer_timeout"]

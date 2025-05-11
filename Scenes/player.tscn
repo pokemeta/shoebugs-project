@@ -1,21 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://hp3pnemoeec"]
+[gd_scene load_steps=6 format=3 uid="uid://hp3pnemoeec"]
 
 [ext_resource type="Script" uid="uid://dvvfyd26ud0lq" path="res://Scripts/PlMv.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://s45y0d36613" path="res://icon.svg" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://bnum8bqkwi1je" path="res://Sprites/thecobbler1.png" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://m6yov3hlx16o" path="res://Sprites/thecobbler2.png" id="3_vgqql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
-size = Vector2(128, 129)
+size = Vector2(66, 129)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0iea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6t5aa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6t5aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vgqql")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["plr"]]
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("1_cvnsp")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_v0iea")
+cheese = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -31,3 +52,10 @@ offset_left = 137.0
 offset_top = 17.0
 offset_right = 177.0
 offset_bottom = 40.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, 1.24999)
+scale = Vector2(0.505859, 0.505859)
+sprite_frames = SubResource("SpriteFrames_v0iea")
+animation = &"move"
+autoplay = "idle"

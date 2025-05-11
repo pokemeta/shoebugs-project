@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4ew7tjaa2poo"]
+
+[ext_resource type="Script" uid="uid://b6j2m033lxk12" path="res://Scripts/diaarea.gd" id="1_ulv5h"]
+[ext_resource type="Script" uid="uid://dr2kk2ea0x222" path="res://Scripts/diastuff.gd" id="2_xml2l"]
+
+[node name="diaarea" type="Area2D"]
+script = ExtResource("1_ulv5h")
+
+[node name="diastuff" type="Node" parent="."]
+script = ExtResource("2_xml2l")
+metadata/_custom_type_script = "uid://dr2kk2ea0x222"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://bu1wtqkrwnyj6" path="res://Themes/UITheme.tres" id="2_k6jq0"]
 [ext_resource type="Resource" uid="uid://cr3n7u55ef3ek" path="res://Resources/Cheese.tres" id="3_fdj0q"]
 
+<<<<<<< HEAD
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ps1r"]
 bg_color = Color(0.933333, 0.764706, 0.6, 1)
 border_width_left = 5
@@ -19,6 +20,9 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="CanvasLayer" type="CanvasLayer"]
+=======
+[node name="ShopLayer" type="CanvasLayer"]
+>>>>>>> 72e30d3523fc0f064ad2154d6580baf95ff5a6f4
 script = ExtResource("1_fdj0q")
 
 [node name="Control" type="Control" parent="."]

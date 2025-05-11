@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn48u0742v61c"]
+
+[ext_resource type="Texture2D" uid="uid://den27sp6pfg3k" path="res://Sprites/textbox.png" id="1_psw4q"]
+
+[node name="textbox" type="CanvasLayer"]
+
+[node name="sprite" type="NinePatchRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_psw4q")
+
+[node name="name" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 478.0
+offset_right = 54.0
+offset_bottom = 501.0
+
+[node name="text" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 523.0
+offset_right = 1144.0
+offset_bottom = 620.0

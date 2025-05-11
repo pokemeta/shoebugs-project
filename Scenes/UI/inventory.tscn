@@ -26,7 +26,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Inventory" type="CanvasLayer"]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

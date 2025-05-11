@@ -34,8 +34,11 @@ func _process(delta: float) -> void:
 	if actualdir != null:
 		velocity += actualdir * speed
 	move_and_slide()
+	
 
 
 func _on_foodndrinktimer_timeout() -> void:
-	stats.food -= 1
-	stats.water -= 1
+	if stats.food > 0:
+		stats.food -= 1
+	if stats.water > 0:
+		stats.water -= 1

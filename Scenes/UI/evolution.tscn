@@ -17,8 +17,12 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
+<<<<<<< HEAD
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_cmoir")
+=======
+[node name="EvolutionLayer" type="CanvasLayer"]
+>>>>>>> 72e30d3523fc0f064ad2154d6580baf95ff5a6f4
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

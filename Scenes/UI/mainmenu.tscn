@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dnhfnagrhhbrb" path="res://Scripts/mainmenu.gd" id="1_pwset"]
 [ext_resource type="Theme" uid="uid://bu1wtqkrwnyj6" path="res://Themes/UITheme.tres" id="1_qshck"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="MenuLayer" type="CanvasLayer"]
 script = ExtResource("1_pwset")
 
 [node name="Control" type="Control" parent="."]
