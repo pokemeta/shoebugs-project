@@ -1,31 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://cn6tnyh07icww"]
+[gd_scene load_steps=6 format=3 uid="uid://cn6yfuokcwc3t"]
 
-[ext_resource type="Theme" uid="uid://bu1wtqkrwnyj6" path="res://Themes/UITheme.tres" id="1_cmoir"]
-[ext_resource type="PackedScene" uid="uid://udh4e07baiv0" path="res://Scenes/UI/EvolutionButton.tscn" id="2_cmoir"]
+[ext_resource type="Script" uid="uid://cstnnt7qseoa0" path="res://Scripts/ui.gd" id="1_cmoir"]
+[ext_resource type="Theme" uid="uid://bu1wtqkrwnyj6" path="res://Themes/UITheme.tres" id="2_bp5av"]
+[ext_resource type="Texture2D" uid="uid://t421whd71vng" path="res://Sprites/cowbug1.png" id="3_8dc6a"]
+[ext_resource type="Texture2D" uid="uid://du8pqaxq1b032" path="res://Sprites/valenopbug.png" id="4_1opkf"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmoir"]
-bg_color = Color(0.412152, 0.412152, 0.412152, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bp5av"]
+bg_color = Color(0.933333, 0.764706, 0.6, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erlxw"]
-bg_color = Color(0.247059, 0.490196, 0, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
+border_color = Color(0.713726, 0.47451, 0.247059, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_cmoir")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -34,8 +27,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_bp5av")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="Panel" type="Panel" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,98 +37,61 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LeftPanel" type="PanelContainer" parent="Control/HBoxContainer"]
-z_index = -2
-custom_minimum_size = Vector2(859.17, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_cmoir")
+[node name="PanelContainer" type="Panel" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -471.0
+offset_top = -283.0
+offset_bottom = 283.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("2_bp5av")
+theme_override_styles/panel = SubResource("StyleBoxFlat_bp5av")
 
-[node name="Control" type="Control" parent="Control/HBoxContainer/LeftPanel"]
-layout_mode = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/PanelContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="EvolutionButton" parent="Control/HBoxContainer/LeftPanel/Control" instance=ExtResource("2_cmoir")]
-z_index = 2
-clip_contents = false
-layout_mode = 0
-offset_left = 379.0
-offset_top = 443.0
-offset_right = 507.0
-offset_bottom = 571.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="EvolutionButton" parent="Control/HBoxContainer/LeftPanel/Control/EvolutionButton" instance=ExtResource("2_cmoir")]
-clip_contents = false
-layout_mode = 0
-offset_left = -192.0
-offset_top = -128.0
-offset_right = -64.0
-offset_bottom = 0.0
-
-[node name="EvolutionButton" parent="Control/HBoxContainer/LeftPanel/Control/EvolutionButton/EvolutionButton" instance=ExtResource("2_cmoir")]
-clip_contents = false
-layout_mode = 0
-offset_left = -96.0
-offset_top = -192.0
-offset_right = 32.0
-offset_bottom = -64.0
-
-[node name="EvolutionButton2" parent="Control/HBoxContainer/LeftPanel/Control/EvolutionButton/EvolutionButton" instance=ExtResource("2_cmoir")]
-clip_contents = false
-layout_mode = 0
-offset_left = 96.0
-offset_top = -192.0
-offset_right = 224.0
-offset_bottom = -64.0
-
-[node name="EvolutionButton2" parent="Control/HBoxContainer/LeftPanel/Control/EvolutionButton" instance=ExtResource("2_cmoir")]
-clip_contents = false
-layout_mode = 0
-offset_left = 192.0
-offset_top = -128.0
-offset_right = 320.0
-offset_bottom = 0.0
-
-[node name="EvolutionButton" parent="Control/HBoxContainer/LeftPanel/Control/EvolutionButton/EvolutionButton2" instance=ExtResource("2_cmoir")]
-layout_mode = 0
-offset_left = 96.0
-offset_top = -192.0
-offset_right = 224.0
-offset_bottom = -64.0
-
-[node name="EvolutionButton2" parent="Control/HBoxContainer/LeftPanel/Control/EvolutionButton/EvolutionButton2" instance=ExtResource("2_cmoir")]
-layout_mode = 0
-offset_left = -96.0
-offset_top = -192.0
-offset_right = 32.0
-offset_bottom = -64.0
-
-[node name="RightPanel" type="PanelContainer" parent="Control/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_cmoir")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer/RightPanel"]
-layout_mode = 2
-alignment = 2
-
-[node name="Description" type="Label" parent="Control/HBoxContainer/RightPanel/VBoxContainer"]
+[node name="Cowbug" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Description"
-horizontal_alignment = 1
+text = "Unlock Cowbug
+(25 Cheese)"
+icon = ExtResource("3_8dc6a")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
-[node name="Cost" type="Label" parent="Control/HBoxContainer/RightPanel/VBoxContainer"]
+[node name="ValenoKbug" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 10
-text = "Cost:"
-
-[node name="Button" type="Button" parent="Control/HBoxContainer/RightPanel/VBoxContainer"]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-theme = ExtResource("1_cmoir")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_cmoir")
-theme_override_styles/normal = SubResource("StyleBoxFlat_erlxw")
+size_flags_vertical = 3
 toggle_mode = true
-text = "Buy"
+text = "Unlock ValenoKbug
+(35 Cheese)"
+icon = ExtResource("4_1opkf")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Back" type="Button" parent="Control/Panel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 28
+toggle_mode = true
+text = "Back"
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
